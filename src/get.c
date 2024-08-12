@@ -5,7 +5,10 @@
 #include "http.h"
 #include "models.h"
 
-#define GET_CONFIG_URL "http://localhost:34001/api/v1.0/get-config"
+#ifndef BASE_URL
+#define BASE_URL "http://localhost:34001"
+#endif
+#define GET_CONFIG_URL BASE_URL "/api/v1.0/get-config"
 
 /**
  * Get the configuration from the API.

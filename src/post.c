@@ -6,7 +6,10 @@
 #include "http.h"
 #include "models.h"
 
-#define SET_CONFIG_URL "http://localhost:34001/api/v1.0/set-config"
+#ifndef BASE_URL
+#define BASE_URL "http://localhost:34001"
+#endif
+#define SET_CONFIG_URL BASE_URL "/api/v1.0/set-config"
 
 void api_set_config(rgb_config config) {
     char* body = (char*)malloc(16384 * sizeof(char));
