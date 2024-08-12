@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "curl.h": "c",
+    "http.h": "c",
+    "json.h": "c",
+    "cstdlib": "c",
+    "utils.h": "c",
+    "models.h": "c",
+    "string.h": "c"
+  }
+}
