@@ -6,6 +6,7 @@
     "cstdlib": "c",
     "utils.h": "c",
     "models.h": "c",
-    "string.h": "c"
+    "string.h": "c",
+    "handler.h": "c"
   }
 }

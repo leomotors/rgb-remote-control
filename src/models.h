@@ -29,3 +29,5 @@ typedef struct {
 
 rgb_config parse_config(struct json_object* object);
 void free_rgb_config(rgb_config config);
+
+char* serialize_config(rgb_config config);

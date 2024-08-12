@@ -1,0 +1,20 @@
+enum REMOTE_BUTTON {
+    KP_1 = 0x45,
+    KP_2 = 0x46,
+    KP_3 = 0x47,
+    KP_4 = 0x44,
+    KP_5 = 0x40,
+    KP_6 = 0x43,
+    KP_7 = 0x07,
+    KP_8 = 0x15,
+    KP_9 = 0x09,
+    KP_ASTERISK = 0x16,
+    KP_0 = 0x19,
+    KP_HASH = 0x0D,
+
+    LEFT = 0x08,
+    UP = 0x18,
+    RIGHT = 0x5A,
+    DOWN = 0x52,
+    OK = 0x1C,
+};

@@ -50,3 +50,25 @@ void free_rgb_config(rgb_config config) {
     free(config.rgb_style);
     free(config.temperature_unit);
 }
+
+char *serialize_config(rgb_config config) {
+    char *buffer = (char *)malloc(8192 * sizeof(char));
+    sprintf(buffer,
+            "{"
+            "\"gpio_fan_mode\": %d,"
+            "\"gpio_fan_pin\": %d,"
+            "\"rgb_brightness\": %d,"
+            "\"rgb_color\": \"%s\","
+            "\"rgb_enable\": %s,"
+            "\"rgb_led_count\": %d,"
+            "\"rgb_speed\": %d,"
+            "\"rgb_style\": \"%s\","
+            "\"temperature_unit\": \"%s\""
+            "}",
+            config.gpio_fan_mode, config.gpio_fan_pin, config.rgb_brightness,
+            config.rgb_color, config.rgb_enable ? "true" : "false",
+            config.rgb_led_count, config.rgb_speed, config.rgb_style,
+            config.temperature_unit);
+
+    return buffer;
+}

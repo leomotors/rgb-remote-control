@@ -42,7 +42,7 @@ int start_listening_remote(void (*handler)(signed int)) {
     printf("Listening for IR events...\n");
 
     while (true) {
-        if (read(fd, &ev, sizeof(struct input_event)) <
+        if ((long unsigned int)read(fd, &ev, sizeof(struct input_event)) <
             sizeof(struct input_event)) {
             perror("Error reading event");
             break;
